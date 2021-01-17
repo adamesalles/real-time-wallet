@@ -1,5 +1,8 @@
 import app from './app';
+import connection from './config/database.config';
 
-app.listen(3000, () => {
-  console.log('Listening 3000');
+connection.then(() => {
+  app.listen(3000, () => {
+    console.log('Listening 3000');
+  });
 });
